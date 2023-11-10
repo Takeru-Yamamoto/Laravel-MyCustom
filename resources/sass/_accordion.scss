@@ -1,0 +1,11 @@
+.accordion-nav {
+  display: none;
+}
+
+.accordion-nav.active {
+  display: inline-block;
+}
+
+.accordion-header.card-header::after {
+  content: none;
+}

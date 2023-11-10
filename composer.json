@@ -1,0 +1,67 @@
+{
+    "name": "takeru-yamamoto/laravel-mycustom",
+    "description": "My Customized Package for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0",
+    "autoload": {
+        "files": [
+            "helpers/auth.php",
+            "helpers/text.php",
+            "helpers/useful.php"
+        ],
+        "psr-4": {
+            "MyCustom\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MyCustom\\AuthServiceProvider",
+                "MyCustom\\ExceptionServiceProvider",
+                "MyCustom\\FacadeServiceProvider",
+                "MyCustom\\LoggingSqlServiceProvider",
+                "MyCustom\\MiddlewareServiceProvider",
+                "MyCustom\\PublicationServiceProvider",
+                "MyCustom\\UrlServiceProvider",
+                "MyCustom\\ViewServiceProvider"
+            ],
+            "aliases": {
+                "OperatorEnum": "MyCustom\\Repositories\\Enums\\OperatorEnum",
+
+                "PrefectureEnum": "MyCustom\\Enums\\PrefectureEnum",
+                "RegionEnum": "MyCustom\\Enums\\RegionEnum",
+                "DayOfWeekEnum": "MyCustom\\Enums\\DayOfWeekEnum",
+
+                "Date": "MyCustom\\Utils\\Facades\\Date",
+                "File": "MyCustom\\Utils\\Facades\\File",
+                "Http": "MyCustom\\Utils\\Facades\\Http",
+                "Time": "MyCustom\\Utils\\Facades\\Time",
+                "Redirect": "MyCustom\\Utils\\Facades\\Redirect",
+                "Logging": "MyCustom\\Utils\\Facades\\Logging",
+                "Crypt": "MyCustom\\Utils\\Facades\\Crypt",
+                "Calculate": "MyCustom\\Utils\\Facades\\Calculate",
+                "Paginate": "MyCustom\\Utils\\Facades\\Paginate",
+                "Text": "MyCustom\\Utils\\Facades\\Text"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Takeru Yamamoto",
+            "email": "yamamo9150@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1.0",
+        "laravel/framework": ">=10.0",
+        "laravel/ui": "^4.2",
+        "barryvdh/laravel-debugbar": "^3.7",
+        "linecorp/line-bot-sdk": "^7.6",
+        "twilio/sdk": "^6.44",
+        "intervention/image": "^2.7",
+        "pbmedia/laravel-ffmpeg": "^8.2",
+        "phpoffice/phpspreadsheet": "^1.26"
+    },
+    "minimum-stability": "dev"
+}

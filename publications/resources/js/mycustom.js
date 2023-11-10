@@ -1,0 +1,1 @@
+import "./../../vendor/takeru-yamamoto/laravel-mycustom/resources/js/mycustom";
