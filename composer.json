@@ -58,10 +58,7 @@
         "laravel/ui": "^4.2",
         "barryvdh/laravel-debugbar": "^3.7",
         "linecorp/line-bot-sdk": "^7.6",
-        "twilio/sdk": "^6.44",
-        "intervention/image": "^2.7",
-        "pbmedia/laravel-ffmpeg": "^8.2",
-        "phpoffice/phpspreadsheet": "^1.26"
+        "twilio/sdk": "^6.44"
     },
     "minimum-stability": "dev"
 }
