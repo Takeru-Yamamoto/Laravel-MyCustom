@@ -4,8 +4,6 @@ namespace MyCustom;
 
 use Illuminate\Support\ServiceProvider as Provider;
 
-use Illuminate\Support\Facades\Blade;
-
 use Illuminate\Pagination\Paginator;
 
 use Illuminate\Support\Arr;
@@ -14,19 +12,8 @@ class ViewServiceProvider extends Provider
 {
     public function boot(): void
     {
-        $this->loadViews();
         $this->addViewPaths();
-        $this->registerViewComponents();
         $this->setPaginatorConfig();
-    }
-
-
-    /**
-     * Viewを登録する
-     */
-    private function loadViews(): void
-    {
-        $this->loadViewsFrom(__DIR__ . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "resources" . DIRECTORY_SEPARATOR . "views", "mycustom");
     }
 
     /**
@@ -39,14 +26,6 @@ class ViewServiceProvider extends Provider
             "pages",
             resource_path("views" . DIRECTORY_SEPARATOR . "pages")
         );
-    }
-
-    /**
-     * Viewを登録する
-     */
-    private function registerViewComponents(): void
-    {
-        Blade::componentNamespace("MyCustom\\ViewComponents", "mycustom");
     }
 
     /**
