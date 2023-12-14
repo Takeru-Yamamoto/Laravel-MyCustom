@@ -61,11 +61,9 @@ return [
      * 
      * 各項目をログに出力するかどうか
      * 
-     * logging_sql        : bool 実行されたSQL文
      * logging_transaction: bool データベースのトランザクション
      * 
      */
-    "logging_sql"         => env("LOGGING_SQL", false),
     "logging_transaction" => env("LOGGING_TRANSACTION", false),
 
     /**
