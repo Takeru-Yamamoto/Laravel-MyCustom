@@ -70,9 +70,6 @@ return [
      * 
      * SNS
      * 
-     * email_from_address: メールの送信元アドレス
-     * email_from_name   : メールの送信元名
-     * 
      * line_access_token      : BaseLineで使用するLINE Messaging APIのアクセストークン
      * line_channel_secret    : BaseLineで使用するLINE Messaging APIのチャンネルシークレットキー
      * 
@@ -82,9 +79,6 @@ return [
      * twilio_status_callback : BaseSmsで使用するTwilioの送信結果を受け取るURL
      * 
      */
-    "email_from_address"      => env("GLOBAL_EMAIL_FROM_ADDRESS", "noreply@example.com"),
-    "email_from_name"         => env("GLOBAL_EMAIL_FROM_NAME", env("APP_NAME") . "@" . env("APP_ENV")),
-
     "line_access_token"       => env("LINE_ACCESS_TOKEN", ""),
     "line_channel_secret"     => env("LINE_CHANNEL_SECRET", ""),
 
